@@ -8,6 +8,8 @@ import (
 	"github.com/ovsinc/multilog/golog"
 )
 
+type Logger common.Logger
+
 // DefaultLogger логгер, используемый по умолчанию.
 // Можно переопределить.
 var DefaultLogger common.Logger = golog.New(pkglog.New(os.Stderr, "", pkglog.LstdFlags))
