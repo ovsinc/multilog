@@ -5,7 +5,8 @@ package journald
 
 import (
 	"fmt"
-	log "multilog/common"
+
+	log "github.com/ovsinc/multilog/common"
 
 	pkgjournal "github.com/coreos/go-systemd/journal"
 )

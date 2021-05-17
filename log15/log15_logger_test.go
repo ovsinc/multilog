@@ -2,9 +2,10 @@
 package log15
 
 import (
-	"multilog/mock"
 	"regexp"
 	"testing"
+
+	"github.com/ovsinc/multilog/mock"
 
 	log15orig "github.com/inconshreveable/log15"
 	"github.com/stretchr/testify/assert"

@@ -1,7 +1,7 @@
 // Package chain реализаует цепочку логгирования.
 package chain
 
-import log "multilog/common"
+import log "github.com/ovsinc/multilog/common"
 
 // New конструктор логгера, реализующего цепочку из логгеров l.
 // Можно указывать произвольное значение.

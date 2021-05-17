@@ -2,8 +2,8 @@
 package log15
 
 import (
-	"multilog/common"
-	log "multilog/common"
+	"github.com/ovsinc/multilog/common"
+	log "github.com/ovsinc/multilog/common"
 
 	log15orig "github.com/inconshreveable/log15"
 )

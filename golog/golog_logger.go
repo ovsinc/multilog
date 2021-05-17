@@ -4,7 +4,7 @@ package golog
 import (
 	gosystemlog "log"
 
-	log "multilog/common"
+	log "github.com/ovsinc/multilog/common"
 )
 
 // New конструтор интерфейс для использования логгера log из состава golang.
