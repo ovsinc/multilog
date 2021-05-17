@@ -2,7 +2,7 @@
 package logrus
 
 import (
-	log "multilog/common"
+	log "github.com/ovsinc/multilog/common"
 
 	origlogrus "github.com/sirupsen/logrus"
 )

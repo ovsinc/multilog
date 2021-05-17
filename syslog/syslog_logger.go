@@ -5,7 +5,8 @@ package syslog
 
 import (
 	gosystemsyslog "log/syslog"
-	"multilog/common"
+
+	"github.com/ovsinc/multilog/common"
 )
 
 // New конструтор интерфейс для использования логгера syslog.

@@ -2,9 +2,10 @@
 package logrus
 
 import (
-	"multilog/mock"
 	"regexp"
 	"testing"
+
+	"github.com/ovsinc/multilog/mock"
 
 	origlogrus "github.com/sirupsen/logrus"
 

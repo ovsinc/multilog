@@ -2,9 +2,10 @@
 package zap
 
 import (
-	"multilog/mock"
 	"regexp"
 	"testing"
+
+	"github.com/ovsinc/multilog/mock"
 
 	"github.com/stretchr/testify/assert"
 

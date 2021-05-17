@@ -1,4 +1,4 @@
-module multilog
+module github.com/ovsinc/multilog
 
 go 1.16
 
@@ -6,7 +6,6 @@ require (
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/inconshreveable/log15 v0.0.0-20201112154412-8562bdadbbac
-	github.com/magiconair/properties v1.8.5
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/sirupsen/logrus v1.8.1
 	github.com/stretchr/testify v1.7.0

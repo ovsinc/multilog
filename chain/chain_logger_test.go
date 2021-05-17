@@ -3,11 +3,12 @@ package chain
 
 import (
 	gosystemlog "log"
-	golog "multilog/golog"
-	"multilog/logrus"
-	"multilog/mock"
 	"regexp"
 	"testing"
+
+	golog "github.com/ovsinc/multilog/golog"
+	"github.com/ovsinc/multilog/logrus"
+	"github.com/ovsinc/multilog/mock"
 
 	origlogrus "github.com/sirupsen/logrus"
 

@@ -2,7 +2,7 @@
 package zap
 
 import (
-	"multilog/common"
+	"github.com/ovsinc/multilog/common"
 
 	origzap "go.uber.org/zap"
 )

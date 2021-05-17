@@ -2,9 +2,10 @@ package multilog
 
 import (
 	pkglog "log"
-	"multilog/common"
-	"multilog/golog"
 	"os"
+
+	"github.com/ovsinc/multilog/common"
+	"github.com/ovsinc/multilog/golog"
 )
 
 // DefaultLogger логгер, используемый по умолчанию.
