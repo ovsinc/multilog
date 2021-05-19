@@ -1,5 +1,9 @@
 // +build !windows,!plan9
 
+// Package syslog implements the syslog logger.
+//
+//
+// RU:
 // Package syslog реализует логгер syslog.
 package syslog
 
@@ -9,6 +13,10 @@ import (
 	"github.com/ovsinc/multilog/common"
 )
 
+// New constructor of a logger that wraps the original syslog writer.
+//
+//
+// RU:
 // New конструтор интерфейс для использования логгера syslog.
 // Оборачивает writer интерфейс.
 func New(w *gosystemsyslog.Writer) common.Logger {
