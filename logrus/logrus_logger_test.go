@@ -1,4 +1,3 @@
-// Package logrus реализует логгер logrus.
 package logrus
 
 import (
@@ -13,7 +12,7 @@ import (
 )
 
 const (
-	rx = "time=\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}\\+[0-9]{2}:00\" level=(debug|info|warning|error) msg=\"hello world\""
+	rx = "time=\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}(\\+[0-9]{2}:00|Z)\" level=(debug|info|warning|error) msg=\"hello world\""
 )
 
 func TestNew(t *testing.T) {

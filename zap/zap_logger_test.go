@@ -1,4 +1,3 @@
-// Package zap реализует логгер zap.
 package zap
 
 import (

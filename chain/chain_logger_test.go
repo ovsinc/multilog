@@ -1,4 +1,3 @@
-// Package chain реализаует цепочку логгирования.
 package chain
 
 import (
@@ -17,8 +16,8 @@ import (
 
 var (
 	prefix = "test/log "
-	rx2    = prefix + "[0-9]{4}/[0-9]{2}/[0-9]{2} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2} (DEBUG|INFO|ERR|WARN): hello world"
-	rx1    = "time=\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}\\+[0-9]{2}:00\" level=(debug|info|warning|error) msg=\"hello world\""
+	rx2    = prefix + "[0-9]{4}/[0-9]{2}/[0-9]{2} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2} hello world"
+	rx1    = "time=\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}(\\+[0-9]{2}:00|Z)\" level=(debug|info|warning|error) msg=\"hello world\""
 )
 
 func TestNew(t *testing.T) {

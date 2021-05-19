@@ -1,4 +1,3 @@
-// Package log15 hеализует логгер log15.
 package log15
 
 import (
@@ -12,7 +11,7 @@ import (
 )
 
 const (
-	rx = "t=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}\\+[0-9]{2}00 lvl=(dbug|info|warn|eror) msg=\"hello world\""
+	rx = "t=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}(\\+[0-9]{2}00|Z) lvl=(dbug|info|warn|eror) msg=\"hello world\""
 )
 
 func TestNew(t *testing.T) {
