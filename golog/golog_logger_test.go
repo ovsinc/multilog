@@ -12,7 +12,7 @@ import (
 
 var (
 	prefix = "test/log "
-	rx     = prefix + "[0-9]{4}/[0-9]{2}/[0-9]{2} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2} (DEBUG|INFO|ERR|WARN): hello world"
+	rx     = prefix + "[0-9]{4}/[0-9]{2}/[0-9]{2} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2} hello world"
 )
 
 func TestNew(t *testing.T) {

@@ -1,4 +1,8 @@
-// Package log15 hеализует логгер log15.
+// Package log15 implements the log15 logger.
+//
+//
+// RU:
+// Package log15 реализует логгер log15.
 package log15
 
 import (
@@ -8,6 +12,10 @@ import (
 	log15orig "github.com/inconshreveable/log15"
 )
 
+// New constructor of a logger that wraps the original logger.
+//
+//
+// RU:
 // New конструктор log15 логгера.
 // Оборачивает log15 логгер l.
 func New(l log15orig.Logger) log.Logger {

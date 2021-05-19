@@ -1,3 +1,7 @@
+// Package zap implements the zap logger.
+//
+//
+// RU:
 // Package zap реализует логгер zap.
 package zap
 
@@ -7,6 +11,10 @@ import (
 	origzap "go.uber.org/zap"
 )
 
+// New constructor of a logger that wraps the original logger.
+//
+//
+// RU:
 // New конструтор интерфейс для использования логгера zap
 // Оборачивает логгер zap l.
 func New(l *origzap.Logger) common.Logger {
