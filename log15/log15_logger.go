@@ -1,6 +1,5 @@
 // Package log15 implements the log15 logger.
 //
-//
 // RU:
 // Package log15 реализует логгер log15.
 package log15
@@ -14,13 +13,16 @@ import (
 
 // New constructor of a logger that wraps the original logger.
 //
-//
 // RU:
 // New конструктор log15 логгера.
 // Оборачивает log15 логгер l.
-func New(l log15orig.Logger) log.Logger {
+func New(l ...log15orig.Logger) log.Logger {
+	logger := log15orig.New()
+	if len(l) > 0 {
+		logger = l[0]
+	}
 	return &log15logger{
-		logger: l,
+		logger: logger,
 	}
 }
 

@@ -1,7 +1,7 @@
+//go:build !window
 // +build !window
 
 // Package journal implements the journal logger.
-//
 //
 // RU:
 // Package journald реализует логгер journald.
@@ -16,7 +16,6 @@ import (
 )
 
 // New constructor of the custom journald logger.
-//
 //
 // RU:
 // New конструктор journald логгера.

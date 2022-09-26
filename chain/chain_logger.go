@@ -1,6 +1,5 @@
 // Package chain implements a logging chain.
 //
-//
 // RU:
 // Package chain реализует цепочку логгирования.
 package chain

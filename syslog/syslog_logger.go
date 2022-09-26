@@ -1,7 +1,7 @@
+//go:build !windows && !plan9
 // +build !windows,!plan9
 
 // Package syslog implements the syslog logger.
-//
 //
 // RU:
 // Package syslog реализует логгер syslog.
@@ -15,13 +15,16 @@ import (
 
 // New constructor of a logger that wraps the original syslog writer.
 //
-//
 // RU:
 // New конструтор интерфейс для использования логгера syslog.
 // Оборачивает writer интерфейс.
-func New(w *gosystemsyslog.Writer) common.Logger {
+func New(w ...*gosystemsyslog.Writer) common.Logger {
+	writer, _ := gosystemsyslog.New(gosystemsyslog.LOG_DEBUG|gosystemsyslog.LOG_LOCAL0, "")
+	if len(w) > 0 {
+		writer = w[0]
+	}
 	return &sysloglogger{
-		writer: w,
+		writer: writer,
 	}
 }
 

@@ -1,6 +1,5 @@
 // Package zap implements the zap logger.
 //
-//
 // RU:
 // Package zap реализует логгер zap.
 package zap
@@ -13,13 +12,16 @@ import (
 
 // New constructor of a logger that wraps the original logger.
 //
-//
 // RU:
 // New конструтор интерфейс для использования логгера zap
 // Оборачивает логгер zap l.
-func New(l *origzap.Logger) common.Logger {
+func New(l ...*origzap.Logger) common.Logger {
+	logger, _ := origzap.NewProduction()
+	if len(l) > 0 {
+		logger = l[0]
+	}
 	return &zaplogger{
-		logger: l,
+		logger: logger,
 	}
 }
 
