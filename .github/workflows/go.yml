@@ -19,7 +19,7 @@ jobs:
       runs-on: ${{ matrix.os }}
       strategy:
         matrix:
-          go-version: [1.16.x]
+          go-version: [1.18.x]
           os: [windows-latest]
       steps:
         - name: Install Go
@@ -44,7 +44,7 @@ jobs:
       runs-on: ${{ matrix.os }}
       strategy:
         matrix:
-          go-version: [1.16.x]
+          go-version: [1.18.x]
           os: [ubuntu-latest, macos-latest]
       steps:
         - name: Install Go
@@ -95,7 +95,7 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.16
+          go-version: 1.18
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Coverage report.
