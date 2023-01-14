@@ -10,6 +10,13 @@ import (
 	log "github.com/ovsinc/multilog/common"
 )
 
+const (
+	debugPrefix = "DBUG "
+	infoPrefix  = "INFO "
+	warnPrefix  = "WARN "
+	errPrefix   = "EROR "
+)
+
 // New constructor of a logger that wraps the original logger.
 //
 // RU:
@@ -30,17 +37,17 @@ type systemlog struct {
 }
 
 func (l *systemlog) Debugf(format string, args ...interface{}) {
-	l.logger.Printf(format, args...)
+	l.logger.Printf(debugPrefix+format, args...)
 }
 
 func (l *systemlog) Infof(format string, args ...interface{}) {
-	l.logger.Printf(format, args...)
+	l.logger.Printf(infoPrefix+format, args...)
 }
 
 func (l *systemlog) Warnf(format string, args ...interface{}) {
-	l.logger.Printf(format, args...)
+	l.logger.Printf(warnPrefix+format, args...)
 }
 
 func (l *systemlog) Errorf(format string, args ...interface{}) {
-	l.logger.Printf(format, args...)
+	l.logger.Printf(errPrefix+format, args...)
 }
