@@ -7,7 +7,7 @@ PKG_LIST := $(shell go list ${_CURDIR}/... 2>/dev/null | grep -v mock)
 
 linter := golangci-lint
 
-test := go test -short -run=.
+test_cmd := go test -short -run=.
 
 
 .PHONY: all
@@ -46,21 +46,24 @@ go_style: ## check style of code
 	@${linter} run -p style
 
 
+.PHONY: tests
+tests: unit_test race msan ## Run all tests
+
 .PHONY: test
-test: unit_test race msan ## Run all tests
+test: unit_test ## Run short test
 
 .PHONY: unit_test
 unit_test: ## Run unittests
-	@${test} ${PKG_LIST}
+	@${test_cmd} ${PKG_LIST}
 
 .PHONY: race
 race: ## Run data race detector
-	@${test} -race ${PKG_LIST}
+	@${test_cmd} -race ${PKG_LIST}
 
 .PHONY: msan
 msan: ## Run memory sanitizer
 	@CXX=clang++ CC=clang \
-	${test} -msan -short ${PKG_LIST}
+	${test_cmd} -msan -short ${PKG_LIST}
 
 
 .PHONY: bench
